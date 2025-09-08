@@ -1,0 +1,41 @@
+# Este é um .gitignore padrão e recomendado para projetos Unity.
+# Ele ignora pastas e arquivos gerados pelo Unity que não devem ser versionados.
+
+# Pastas geradas pelo Unity
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# Arquivos de memória da solução Visual Studio / Rider
+/[Mm]emory[Dd]umps/
+
+# Arquivos gerados por Ferramentas de Build
+/[Aa]ssets/AssetStoreTools/
+/[Aa]ssets/AddressableAssetsData/*.*.bin*
+/[Aa]ssets/StreamingAssets/aa.meta
+/[Aa]ssets/StreamingAssets/aa/*
+
+# Arquivos de IDE e sistema operacional
+.vs/
+.vscode/
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+*.csproj.user
+*.unityproj.user
+*.booproj.user
+
+# Arquivos de sistema
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
