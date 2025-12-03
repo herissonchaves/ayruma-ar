@@ -1,138 +1,149 @@
 using UnityEngine;
 
+// Garante que o componente CharacterController exista no objeto
 [RequireComponent(typeof(CharacterController))]
-public class MovePersonagemFinal : MonoBehaviour
+public class MovePersonagemUnity6 : MonoBehaviour
 {
-    [Header("Referências")]
-    [SerializeField] private GameObject jogador;   // Objeto visual do personagem (malha)
-    [SerializeField] private Animation animacao;   // Componente Animation
+    [Header("Configurações de Movimento")]
+    [SerializeField] private float velocidade = 5.0f;
+    [SerializeField] private float velocidadeRotacao = 720f; // Graus por segundo
+    [SerializeField] private float alturaPulo = 1.2f;
+    [SerializeField] private float gravidade = -20.0f;
 
-    [Header("Configuração")]
-    public float velocidade = 5.0f;
-    public float velocidadeRotacao = 720f; // 720°/s = bem responsivo
-    public float alturaPulo = 1.2f;
-    public float gravidade = -20.0f;       // negativo = puxando para baixo
+    [Header("Referências Visuais")]
+    // Tooltip ajuda a entender o que fazer no Inspector
+    [Tooltip("Arraste o componente Animation aqui, se houver.")]
+    [SerializeField] private Animation animacao; 
 
+    // Variáveis privadas para controle interno
     private CharacterController _characterController;
     private Transform _cameraTransform;
-    private Transform _jogadorTransform;
-    private float _velocidadeY;            // só o eixo vertical
+    private float _velocidadeY; // Controle da gravidade (Eixo Y)
 
     void Awake()
     {
+        // Cache dos componentes para melhor performance
         _characterController = GetComponent<CharacterController>();
 
-        // Se não arrastar nada no inspetor, usa o próprio objeto
-        if (jogador == null)
-            jogador = gameObject;
-
-        _jogadorTransform = jogador.transform;
-
-        // Tenta achar Animation no jogador (ou em filhos dele)
-        if (animacao == null)
+        // Tenta pegar a câmera principal de forma segura
+        if (Camera.main != null)
         {
-            animacao = _jogadorTransform.GetComponentInChildren<Animation>();
+            _cameraTransform = Camera.main.transform;
+        }
+        else
+        {
+            Debug.LogWarning("Atenção: Nenhuma câmera com a tag 'MainCamera' foi encontrada.");
         }
 
-        if (Camera.main != null)
-            _cameraTransform = Camera.main.transform;
-        else
-            Debug.LogWarning("ALERTA: Câmera não encontrada. O movimento será relativo ao Mundo, não à câmera.");
+        // Se a animação não foi definida, tenta achar no objeto ou nos filhos
+        if (animacao == null)
+            animacao = GetComponentInChildren<Animation>();
     }
 
     void Update()
     {
-        // 1. INPUT (Raw deixa mais responsivo)
-        float inputH = Input.GetAxisRaw("Horizontal"); // A/D ou Setas Esq/Dir
-        float inputV = Input.GetAxisRaw("Vertical");   // W/S ou Setas Cima/Baixo
+        MoverPersonagem();
+        GerenciarAnimacoes();
+    }
 
-        // 2. CALCULAR DIREÇÃO PLANA (XZ)
-        Vector3 direcaoMovimento;
+    private void MoverPersonagem()
+    {
+        // 1. INPUT (Entrada do Jogador)
+        // Unity 6 ainda suporta Input.GetAxis, mas recomenda-se o novo Input System para projetos futuros.
+        float inputH = Input.GetAxisRaw("Horizontal"); 
+        float inputV = Input.GetAxisRaw("Vertical");   
+
+        // 2. CÁLCULO DA DIREÇÃO (Baseado na Câmera)
+        Vector3 direcaoMovimento = Vector3.zero;
 
         if (_cameraTransform != null)
         {
+            // Pega a frente e a direita da câmera
             Vector3 camFrente = _cameraTransform.forward;
             Vector3 camDireita = _cameraTransform.right;
 
+            // Remove a inclinação Y (para não andar para o chão ou céu)
             camFrente.y = 0;
             camDireita.y = 0;
 
-            if (camFrente.sqrMagnitude < 0.01f)
-            {
-                camFrente = Vector3.forward;
-            }
-            else
-            {
-                camFrente.Normalize();
-            }
-
+            // Normaliza para manter o comprimento do vetor igual a 1
+            camFrente.Normalize();
             camDireita.Normalize();
 
-            direcaoMovimento = camFrente * inputV + camDireita * inputH;
+            // Combina as direções
+            direcaoMovimento = (camFrente * inputV) + (camDireita * inputH);
         }
         else
         {
-            direcaoMovimento = Vector3.forward * inputV + Vector3.right * inputH;
+            // Fallback se não houver câmera: move baseado no mundo (Global)
+            direcaoMovimento = (Vector3.forward * inputV) + (Vector3.right * inputH);
         }
 
+        // Normaliza se o jogador apertar duas teclas (W+D) para não andar mais rápido na diagonal
         if (direcaoMovimento.sqrMagnitude > 1f)
             direcaoMovimento.Normalize();
 
-        // 3. ROTAÇÃO: gira SEMPRE na direção em que está andando
-        if (direcaoMovimento.sqrMagnitude > 0.0001f)
+        // 3. ROTAÇÃO (O Pulo do Gato!)
+        // Só rotacionamos se houver movimento significativo
+        if (direcaoMovimento.sqrMagnitude > 0.05f)
         {
-            // Garante que não vamos inclinar pra cima/baixo
-            Vector3 lookDir = new Vector3(direcaoMovimento.x, 0f, direcaoMovimento.z);
-
-            // Se por algum motivo o vetor ficar zerado, não tenta girar
-            if (lookDir.sqrMagnitude > 0.0001f)
-            {
-                Quaternion rotacaoAlvo = Quaternion.LookRotation(lookDir, Vector3.up);
-
-                // IMPORTANTE: rotaciona o OBJETO VISUAL (jogador), não o capsule se forem diferentes
-                _jogadorTransform.rotation = Quaternion.RotateTowards(
-                    _jogadorTransform.rotation,
-                    rotacaoAlvo,
-                    velocidadeRotacao * Time.deltaTime
-                );
-            }
+            // Cria uma rotação "olhando" para a direção do movimento
+            Quaternion rotacaoAlvo = Quaternion.LookRotation(direcaoMovimento);
+            
+            // Aplica ao transform DESTE objeto (o pai de tudo)
+            // RotateTowards faz a transição suave (Smooth)
+            transform.rotation = Quaternion.RotateTowards(
+                transform.rotation, 
+                rotacaoAlvo, 
+                velocidadeRotacao * Time.deltaTime
+            );
         }
 
         // 4. GRAVIDADE E PULO
         bool estaNoChao = _characterController.isGrounded;
 
+        // Reseta a gravidade se estiver no chão (valor pequeno para garantir contato)
         if (estaNoChao && _velocidadeY < 0)
-            _velocidadeY = -2f; // "cola" no chão
+            _velocidadeY = -2f;
 
         if (Input.GetButtonDown("Jump") && estaNoChao)
         {
+            // Fórmula da física para altura do pulo: v = sqrt(h * -2 * g)
             _velocidadeY = Mathf.Sqrt(alturaPulo * -2f * gravidade);
-            if (animacao != null)
-                animacao.Play("JUMP");
+            
+            if (animacao != null) animacao.Play("JUMP");
         }
 
+        // Aplica gravidade acumulativa
         _velocidadeY += gravidade * Time.deltaTime;
 
-        // 5. MOVER O PERSONAGEM (XZ + Y)
+        // 5. APLICA O MOVIMENTO FINAL
         Vector3 movimentoFinal = direcaoMovimento * velocidade;
-        movimentoFinal.y = _velocidadeY;
+        movimentoFinal.y = _velocidadeY; // Insere a gravidade no vetor
 
+        // Move o CharacterController
         _characterController.Move(movimentoFinal * Time.deltaTime);
+    }
 
-        // 6. ANIMAÇÃO (IDLE / WALK)
-        if (animacao != null && estaNoChao)
+    private void GerenciarAnimacoes()
+    {
+        if (animacao == null) return;
+
+        bool estaNoChao = _characterController.isGrounded;
+        // Verifica se o personagem está se movendo horizontalmente (ignora Y)
+        bool estaAndando = new Vector3(_characterController.velocity.x, 0, _characterController.velocity.z).magnitude > 0.1f;
+
+        if (estaNoChao)
         {
-            bool estaAndando = direcaoMovimento.sqrMagnitude > 0.01f;
-
             if (estaAndando)
             {
                 if (!animacao.IsPlaying("WALK") && !animacao.IsPlaying("JUMP"))
-                    animacao.Play("WALK");
+                    animacao.CrossFade("WALK", 0.2f); // CrossFade suaviza a troca
             }
             else
             {
                 if (!animacao.IsPlaying("IDLE") && !animacao.IsPlaying("JUMP"))
-                    animacao.Play("IDLE");
+                    animacao.CrossFade("IDLE", 0.2f);
             }
         }
     }
