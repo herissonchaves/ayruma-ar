@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Garante que o componente CharacterController exista no objeto
 [RequireComponent(typeof(CharacterController))]
@@ -147,4 +148,21 @@ public class MovePersonagemUnity6 : MonoBehaviour
             }
         }
     }
+
+void carregaFase()
+    {
+       // Application.LoadLevel("cena");
+        SceneManager.LoadScene("cena");
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // NOVIDADE: Usar CompareTag é mais rápido e seguro que "=="
+        if (other.CompareTag("buraco"))
+        {
+            Invoke("carregaFase", 1f);
+        }
+    }
+
 }
+
