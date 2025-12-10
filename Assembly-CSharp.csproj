@@ -52,6 +52,7 @@
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\giraObjeto.cs" />
     <Compile Include="Assets\Scripts\testMov.cs" />
+    <Compile Include="Assets\Scripts\movimentaCamera.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
