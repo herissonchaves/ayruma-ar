@@ -603,6 +603,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6215105277093952240, guid: 57052b2e17f7d4e62a6c7f0cb6a70b84, type: 3}
+      propertyPath: somHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d2dc483d06904fd884ec9b3a21bf584, type: 3}
+    - target: {fileID: 6215105277093952240, guid: 57052b2e17f7d4e62a6c7f0cb6a70b84, type: 3}
+      propertyPath: somLose
+      value: 
+      objectReference: {fileID: 8300000, guid: bba30cc84894743a7a8ce5fb9995405f, type: 3}
+    - target: {fileID: 6215105277093952240, guid: 57052b2e17f7d4e62a6c7f0cb6a70b84, type: 3}
+      propertyPath: puloSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b8ad809b8b99845c781f3bdc241afebb, type: 3}
     - target: {fileID: 8256083783402838868, guid: 57052b2e17f7d4e62a6c7f0cb6a70b84, type: 3}
       propertyPath: m_Name
       value: nodeJogador

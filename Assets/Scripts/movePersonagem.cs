@@ -21,6 +21,9 @@ public class MovePersonagemUnity6 : MonoBehaviour
     private Transform _cameraTransform;
     private float _velocidadeY; // Controle da gravidade (Eixo Y)
 
+    public AudioClip somLose;
+    public AudioClip puloSound;
+
     void Awake()
     {
         // Cache dos componentes para melhor performance
@@ -113,6 +116,7 @@ public class MovePersonagemUnity6 : MonoBehaviour
             _velocidadeY = Mathf.Sqrt(alturaPulo * -2f * gravidade);
             
             if (animacao != null) animacao.Play("JUMP");
+            GetComponent<AudioSource>().PlayOneShot(puloSound, 0.7f);
         }
 
         // Aplica gravidade acumulativa
@@ -161,6 +165,7 @@ void carregaFase()
         if (other.CompareTag("buraco"))
         {
             Invoke("carregaFase", 1f);
+            GetComponent<AudioSource>().PlayOneShot(somLose, 0.7f);
         }
     }
 
