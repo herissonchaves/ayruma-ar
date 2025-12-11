@@ -1,13 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem; // Biblioteca do Unity 6
+using UnityEngine.InputSystem; // Biblioteca Essencial do Unity 6
 
-// Garante que o personagem tenha o componente físico necessário
 [RequireComponent(typeof(CharacterController))]
 public class MovePersonagemUnity6 : MonoBehaviour
 {
-    [Header("Configurações de Input (Os 'Ouvidos' do Script)")]
-    // Essas variáveis vão aparecer no Inspector para você configurar quais botões ler
+    [Header("Configurações de Input")]
+    // Em vez de strings fixas, criamos variáveis editáveis no Inspector
     public InputAction moveAction; 
     public InputAction jumpAction;
 
@@ -24,22 +23,22 @@ public class MovePersonagemUnity6 : MonoBehaviour
     private Transform _cameraTransform;
     private float _velocidadeY;
 
-    // Áudio (Opcional)
+    // Áudio
     public AudioClip somLose;
     public AudioClip puloSound;
-    private AudioSource _audioSource; // Criamos uma referência privada para ficar organizado
+    private AudioSource _audioSource;
 
-    // --- CICLO DE VIDA DO INPUT SYSTEM ---
-    // Diferente do Unity 5, precisamos "Ligar" as ações quando o objeto ativa
+    // --- IMPORTANTE: Ligar e Desligar os Inputs ---
     private void OnEnable()
     {
+        // No Unity 6, precisamos "ligar a tomada" dos controles
         moveAction.Enable();
         jumpAction.Enable();
     }
 
-    // E "Desligar" quando desativa para não dar erro de memória
     private void OnDisable()
     {
+        // E desligar quando mudar de cena ou destruir o objeto
         moveAction.Disable();
         jumpAction.Disable();
     }
@@ -52,6 +51,8 @@ public class MovePersonagemUnity6 : MonoBehaviour
         if (Camera.main != null)
             _cameraTransform = Camera.main.transform;
         
+        // Boa prática: TryGetComponent é mais seguro no Unity moderno, 
+        // mas GetComponentInChildren funciona bem para hierarquias.
         if (animacao == null)
             animacao = GetComponentInChildren<Animation>();
     }
@@ -64,14 +65,15 @@ public class MovePersonagemUnity6 : MonoBehaviour
 
     private void MoverPersonagem()
     {
-        // 1. Lendo o Joystick (Vem como um Vector2: X horizontal, Y vertical)
-        // Isso lê tanto o teclado (WASD) quanto o Joystick da tela se configurado corretamente
+        // --- MUDANÇA PRINCIPAL AQUI ---
+        // Unity 5: Input.GetAxis("Horizontal")
+        // Unity 6: Lemos o valor direto da Ação configurada
         Vector2 inputMovimento = moveAction.ReadValue<Vector2>();
 
         float inputH = inputMovimento.x;
         float inputV = inputMovimento.y;
 
-        // Lógica de Direção (Mantida do original, funciona bem)
+        // Lógica de Direção (Idêntica à do professor, matemática não muda)
         Vector3 direcaoMovimento = Vector3.zero;
 
         if (_cameraTransform != null)
@@ -91,11 +93,9 @@ public class MovePersonagemUnity6 : MonoBehaviour
             direcaoMovimento = (Vector3.forward * inputV) + (Vector3.right * inputH);
         }
 
-        // Normaliza para não andar mais rápido na diagonal
         if (direcaoMovimento.sqrMagnitude > 1f)
             direcaoMovimento.Normalize();
 
-        // Rotaciona o personagem para onde ele está andando
         if (direcaoMovimento.sqrMagnitude > 0.05f)
         {
             Quaternion rotacaoAlvo = Quaternion.LookRotation(direcaoMovimento);
@@ -109,27 +109,23 @@ public class MovePersonagemUnity6 : MonoBehaviour
         // --- PULO ---
         bool estaNoChao = _characterController.isGrounded;
 
-        // Resetar velocidade Y se estiver no chão
         if (estaNoChao && _velocidadeY < 0)
             _velocidadeY = -2f;
 
-        // 2. Verificando se o botão de Pulo foi apertado neste frame
+        // Unity 5: Input.GetButtonDown("Jump")
+        // Unity 6: Verificamos se a ação foi acionada neste quadro
         if (jumpAction.WasPressedThisFrame() && estaNoChao)
         {
-            // Fórmula física do pulo
             _velocidadeY = Mathf.Sqrt(alturaPulo * -2f * gravidade);
             
             if (animacao != null) animacao.Play("JUMP");
             
-            // Toca o som se existir o componente e o clip
             if (_audioSource != null && puloSound != null) 
                 _audioSource.PlayOneShot(puloSound, 0.7f);
         }
 
-        // Aplica gravidade
         _velocidadeY += gravidade * Time.deltaTime;
 
-        // Move o CharacterController
         Vector3 movimentoFinal = direcaoMovimento * velocidade;
         movimentoFinal.y = _velocidadeY;
 
@@ -141,7 +137,7 @@ public class MovePersonagemUnity6 : MonoBehaviour
         if (animacao == null) return;
 
         bool estaNoChao = _characterController.isGrounded;
-        // Verifica se o personagem está se movendo horizontalmente
+        // Verifica a magnitude apenas nos eixos X e Z (ignora o pulo Y)
         bool estaAndando = new Vector3(_characterController.velocity.x, 0, _characterController.velocity.z).magnitude > 0.1f;
 
         if (estaNoChao)
@@ -159,9 +155,10 @@ public class MovePersonagemUnity6 : MonoBehaviour
         }
     }
     
-    // Funções extras (triggers, etc) mantidas...
+    // Funções extras
      void carregaFase()
     {
+        // Boas práticas modernas: Usar LoadScene em vez de Application.LoadLevel (que era do Unity 5)
         SceneManager.LoadScene("cena");
     }
 
