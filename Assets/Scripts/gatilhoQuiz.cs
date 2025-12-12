@@ -4,13 +4,22 @@ public class GatilhoQuiz : MonoBehaviour
 {
     public TriviaManager oGerenteDoQuiz;
 
+    // Quando o sapo ENTRA no cubo
     private void OnTriggerEnter(Collider other)
     {
-        // Verifica se quem bateu foi o Jogador (precisa ter a tag "Player" ou o nome certo)
-        if (other.name == "NomeDoSeuSapoAqui" || other.CompareTag("Player")) 
+        if (other.CompareTag("Player")) 
         {
             oGerenteDoQuiz.AbrirQuiz();
-            Destroy(gameObject); // Destroi o gatilho para não ativar de novo
+        }
+    }
+
+    // Quando o sapo SAI do cubo
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player")) 
+        {
+            // AQUI ESTAVA O ERRO: Mudamos de FecharQuiz para FecharTudo
+            oGerenteDoQuiz.FecharTudo(); 
         }
     }
 }
