@@ -786,7 +786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &563822346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2631,12 +2631,12 @@ GameObject:
   - component: {fileID: 1767140725}
   - component: {fileID: 1767140729}
   m_Layer: 0
-  m_Name: TriviaObject
+  m_Name: TriviaObjectTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1767140725
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3110,7 +3110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2096076850
 MonoBehaviour:
   m_ObjectHideFlags: 0
