@@ -10,7 +10,8 @@ TrueTypeFontImporter:
   includeFontData: 1
   fontNames:
   - Skranji
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 469a5d097b62c4f6a9add193997b6443, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
