@@ -369,9 +369,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 565
-        y: 1458
+        y: 1461
         width: 74
-        height: 74
+        height: 71
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -412,9 +412,9 @@ TextureImporter:
       name: HUB4-Quiz_16
       rect:
         serializedVersion: 2
-        x: 804
+        x: 810
         y: 1462
-        width: 25
+        width: 19
         height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -879,7 +879,7 @@ TextureImporter:
         width: 75
         height: 85
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
