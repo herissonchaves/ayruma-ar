@@ -1587,7 +1587,7 @@ GameObject:
   - component: {fileID: 1551263369}
   - component: {fileID: 1551263368}
   m_Layer: 5
-  m_Name: txtInfoTema
+  m_Name: txtTema
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

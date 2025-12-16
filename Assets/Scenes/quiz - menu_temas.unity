@@ -913,7 +913,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 220778880}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1099737489}
+        m_TargetAssemblyTypeName: temaJogo, Assembly-CSharp
+        m_MethodName: Jogar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &220778880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1375,7 +1387,7 @@ GameObject:
   - component: {fileID: 473045170}
   - component: {fileID: 473045169}
   m_Layer: 5
-  m_Name: txt_infoTema
+  m_Name: txtinfoTema
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1621,7 +1633,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 721148028}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1099737489}
+        m_TargetAssemblyTypeName: temaJogo, Assembly-CSharp
+        m_MethodName: selecioneTema
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &721148028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2024,6 +2048,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1099737488}
   - component: {fileID: 1099737487}
+  - component: {fileID: 1099737489}
   m_Layer: 0
   m_Name: _GC
   m_TagString: Untagged
@@ -2058,6 +2083,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1099737489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099737486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f8b79351260e4bdf8e3ec71c34ce36b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::temaJogo
+  btnPlay: {fileID: 220778879}
+  txtTema: {fileID: 2081650092}
+  infoTema: {fileID: 474350761}
+  txtInfoTema: {fileID: 473045169}
+  estrela1: {fileID: 262707975}
+  estrela2: {fileID: 833949292}
+  estrela3: {fileID: 2059889382}
+  temas:
+  - Selecione um tema
+  - Fases da Lua
+  - "Constela\xE7\xF5es"
+  numeroQuestoes: 10
 --- !u!1 &1106634075
 GameObject:
   m_ObjectHideFlags: 0
@@ -2745,7 +2794,7 @@ GameObject:
   - component: {fileID: 2081650093}
   - component: {fileID: 2081650092}
   m_Layer: 5
-  m_Name: txt_nomeTema
+  m_Name: txtTema
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2790,7 +2839,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Selecione um tema
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9be9519ca20484789ab6b05115c55704, type: 2}
   m_sharedMaterial: {fileID: 4344409018107704435, guid: 9be9519ca20484789ab6b05115c55704, type: 2}
