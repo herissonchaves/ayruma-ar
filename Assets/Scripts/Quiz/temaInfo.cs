@@ -12,11 +12,32 @@ public class temaInfo : MonoBehaviour
         estrela1.SetActive(false);
         estrela2.SetActive(false);
         estrela3.SetActive(false);
+
+        int notaF = PlayerPrefs.GetInt("notaFinal" + idTema.ToString());
+
+        if(notaF==10)
+        {
+            estrela1.SetActive(true);
+            estrela2.SetActive(true);
+            estrela3.SetActive(true);
+        }
+        else if(notaF>=7)
+        {
+            estrela1.SetActive(true);
+            estrela2.SetActive(true);
+            estrela3.SetActive(false);
+        }
+        else if(notaF>=4)
+        {
+            estrela1.SetActive(true);
+            estrela2.SetActive(false);
+            estrela3.SetActive(false);
+        }
+
+
+
+
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

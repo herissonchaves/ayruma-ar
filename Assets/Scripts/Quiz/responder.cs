@@ -94,18 +94,17 @@ public class responder : MonoBehaviour
         {
             media = (acertos / questoes) * 10f;
             notaFinal = Mathf.RoundToInt(media);
-            if(notaFinal<PlayerPrefs.GetInt("notaFinal"+idTema.ToString()))
+            //grava apenas quando bate o recorde
+            if(notaFinal>PlayerPrefs.GetInt("notaFinal"+idTema.ToString()))
             {
                 PlayerPrefs.SetInt("notaFinal"+idTema.ToString(), notaFinal);
                 PlayerPrefs.SetInt("acertos"+idTema.ToString(), (int) acertos);
             }
-            else
-            {
-                PlayerPrefs.SetInt("notaFinal"+idTema.ToString(),notaFinal);
-            }
-            {
-                notaFinal = PlayerPrefs.GetInt("notaFinal");
-            }
+            //notas que sempre sao gravadas
+            PlayerPrefs.SetInt("notaFinalTemp"+idTema.ToString(), notaFinal);
+            PlayerPrefs.SetInt("acertosTemp"+idTema.ToString(), (int) acertos);
+            
+
             SceneManager.LoadScene("quiz - notaFinal");
         }
     }
