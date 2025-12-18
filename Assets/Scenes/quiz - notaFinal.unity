@@ -1722,6 +1722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1720681152}
   - component: {fileID: 1720681151}
+  - component: {fileID: 1720681153}
   m_Layer: 0
   m_Name: _GC
   m_TagString: Untagged
@@ -1756,6 +1757,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1720681153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720681150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12da59a440a57420a8669b021b60cb04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::notaFinal
+  textoNotaFinal: {fileID: 744108781}
+  txtinfoTema: {fileID: 1551263368}
+  estrela1: {fileID: 1140865424}
+  estrela2: {fileID: 1001053133}
+  estrela3: {fileID: 1797465652}
 --- !u!1 &1797465652
 GameObject:
   m_ObjectHideFlags: 0

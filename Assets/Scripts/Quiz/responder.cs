@@ -20,6 +20,7 @@ public class responder : MonoBehaviour
     private float acertos;
     private float questoes;
     private float media;
+    private int notaFinal;
 
     public string[] perguntas;
     public string[] alternativasA;
@@ -30,6 +31,7 @@ public class responder : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        idTema = PlayerPrefs.GetInt("idTema");
         idPerguntas=0;
         questoes=perguntas.Length;
         pergunta.text=perguntas[idPerguntas];
@@ -90,6 +92,20 @@ public class responder : MonoBehaviour
         }
         else
         {
+            media = (acertos / questoes) * 10f;
+            notaFinal = Mathf.RoundToInt(media);
+            if(notaFinal<PlayerPrefs.GetInt("notaFinal"+idTema.ToString()))
+            {
+                PlayerPrefs.SetInt("notaFinal"+idTema.ToString(), notaFinal);
+                PlayerPrefs.SetInt("acertos"+idTema.ToString(), (int) acertos);
+            }
+            else
+            {
+                PlayerPrefs.SetInt("notaFinal"+idTema.ToString(),notaFinal);
+            }
+            {
+                notaFinal = PlayerPrefs.GetInt("notaFinal");
+            }
             SceneManager.LoadScene("quiz - notaFinal");
         }
     }
