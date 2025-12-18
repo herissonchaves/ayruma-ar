@@ -22,7 +22,7 @@ public class temaJogo : MonoBehaviour
     {
         idTema=0;
         txtTema.text = temas[idTema];
-        txtInfoTema.text="Você acertou X de X questões";
+       // txtInfoTema.text="Você acertou X de 10 questões";
         infoTema.SetActive(false);
         estrela1.SetActive(false);
         estrela2.SetActive(false);
@@ -36,6 +36,9 @@ public class temaJogo : MonoBehaviour
         txtTema.text = temas[i];
         int notaF=PlayerPrefs.GetInt("notaFinal" + idTema.ToString());
         int acertos=PlayerPrefs.GetInt("acertos" + idTema.ToString());
+        estrela1.SetActive(false);
+        estrela2.SetActive(false);
+        estrela3.SetActive(false);
 
         if(notaF==10)
         {

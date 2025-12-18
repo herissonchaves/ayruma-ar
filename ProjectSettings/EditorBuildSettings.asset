@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/quiz - tema1.unity
     guid: 69f9c4fdc4dcc4accb17cc06ec9665dd
   - enabled: 1
+    path: Assets/Scenes/quiz - tema2.unity
+    guid: 74a549361533f48ccb4f1e0cef7d317c
+  - enabled: 1
     path: Assets/Scenes/quiz - notaFinal.unity
     guid: ed05828544f474667b3f40dc99bcb1cd
   m_configObjects:
