@@ -682,7 +682,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 371598168}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1721263813}
+        m_TargetAssemblyTypeName: responder, Assembly-CSharp
+        m_MethodName: resposta
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: A
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &371598168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -892,8 +904,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -463, y: -345}
-  m_SizeDelta: {x: 826.9534, y: 623.45465}
+  m_AnchoredPosition: {x: -342.06, y: -348.99}
+  m_SizeDelta: {x: 684.13, y: 101.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &470447757
 MonoBehaviour:
@@ -1077,7 +1089,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 485275727}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1721263813}
+        m_TargetAssemblyTypeName: responder, Assembly-CSharp
+        m_MethodName: resposta
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: C
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &485275727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1506,7 +1530,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1037898627}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1721263813}
+        m_TargetAssemblyTypeName: responder, Assembly-CSharp
+        m_MethodName: resposta
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: B
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1037898627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1891,7 +1927,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1563227898}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1721263813}
+        m_TargetAssemblyTypeName: responder, Assembly-CSharp
+        m_MethodName: resposta
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: D
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1563227898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1940,6 +1988,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1721263812}
   - component: {fileID: 1721263811}
+  - component: {fileID: 1721263813}
   m_Layer: 0
   m_Name: _GC
   m_TagString: Untagged
@@ -1974,6 +2023,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1721263813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721263810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b20efa9c850654f5087fb707fb2e1e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::responder
+  pergunta: {fileID: 1763615725}
+  respostaA: {fileID: 565347816}
+  respostaB: {fileID: 134006472}
+  respostaC: {fileID: 1063295876}
+  respostaD: {fileID: 2029809395}
+  infoRespostas: {fileID: 470447757}
+  perguntas:
+  - "O personagem Sonic \xE9:"
+  - O Primeiro console caseiro foi
+  alternativasA:
+  - uma raposa
+  - O Tele Jogo
+  alternativasB:
+  - "um ouri\xE7o"
+  - O Atari
+  alternativasC:
+  - um porco espinho
+  - O Megavox Odyssey
+  alternativasD:
+  - um marsupial
+  - O Pong
+  respostasCorretas:
+  - "um ouri\xE7o"
+  - O Megavox Odyssey
 --- !u!1 &1763615723
 GameObject:
   m_ObjectHideFlags: 0
