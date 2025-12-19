@@ -1,6 +1,5 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 public class comandosBasicos : MonoBehaviour
 {
     public void carregaCena (string nomeCena)

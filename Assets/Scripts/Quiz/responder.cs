@@ -1,8 +1,5 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
-using System.Text;
-using System.Collections.Specialized;
 using UnityEngine.SceneManagement;
 
 public class responder : MonoBehaviour
