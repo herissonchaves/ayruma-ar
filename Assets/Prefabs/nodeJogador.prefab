@@ -93,11 +93,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d18b1be39a778b44996ea8d385757c8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::movePersonagem
+  moveAction:
+    m_Name: Move
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a25a70e4-b1ec-4711-8196-5f717e368def
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  jumpAction:
+    m_Name: Jump
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f6fc62cb-f4f3-4680-b866-1ee159994e10
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   velocidade: 5
   velocidadeRotacao: 720
   alturaPulo: 0.6
   gravidade: -10
   animacao: {fileID: 6731256298437457447}
+  somLose: {fileID: 0}
+  puloSound: {fileID: 0}
 --- !u!1001 &4877905598414750978
 PrefabInstance:
   m_ObjectHideFlags: 0

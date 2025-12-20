@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem; // Biblioteca Essencial do Unity 6
 
 [RequireComponent(typeof(CharacterController))]
-public class MovePersonagemUnity6 : MonoBehaviour
+public class MovePersonagem : MonoBehaviour
 {
     [Header("Configurações de Input")]
     // Em vez de strings fixas, criamos variáveis editáveis no Inspector
@@ -65,27 +65,21 @@ public class MovePersonagemUnity6 : MonoBehaviour
 
     private void MoverPersonagem()
     {
-        // --- MUDANÇA PRINCIPAL AQUI ---
-        // Unity 5: Input.GetAxis("Horizontal")
-        // Unity 6: Lemos o valor direto da Ação configurada
+        // 1. INPUT (Igual)
         Vector2 inputMovimento = moveAction.ReadValue<Vector2>();
-
         float inputH = inputMovimento.x;
         float inputV = inputMovimento.y;
 
-        // Lógica de Direção (Idêntica à do professor, matemática não muda)
+        // 2. DIREÇÃO (Igual)
         Vector3 direcaoMovimento = Vector3.zero;
-
         if (_cameraTransform != null)
         {
             Vector3 camFrente = _cameraTransform.forward;
             Vector3 camDireita = _cameraTransform.right;
-
             camFrente.y = 0;
             camDireita.y = 0;
             camFrente.Normalize();
             camDireita.Normalize();
-
             direcaoMovimento = (camFrente * inputV) + (camDireita * inputH);
         }
         else
@@ -93,43 +87,51 @@ public class MovePersonagemUnity6 : MonoBehaviour
             direcaoMovimento = (Vector3.forward * inputV) + (Vector3.right * inputH);
         }
 
-        if (direcaoMovimento.sqrMagnitude > 1f)
-            direcaoMovimento.Normalize();
+        if (direcaoMovimento.sqrMagnitude > 1f) direcaoMovimento.Normalize();
 
+        // 3. ROTAÇÃO (Igual)
         if (direcaoMovimento.sqrMagnitude > 0.05f)
         {
             Quaternion rotacaoAlvo = Quaternion.LookRotation(direcaoMovimento);
-            transform.rotation = Quaternion.RotateTowards(
-                transform.rotation, 
-                rotacaoAlvo, 
-                velocidadeRotacao * Time.deltaTime
-            );
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotacaoAlvo, velocidadeRotacao * Time.deltaTime);
         }
 
-        // --- PULO ---
+        // 4. PULO E GRAVIDADE (Ajustado)
         bool estaNoChao = _characterController.isGrounded;
 
         if (estaNoChao && _velocidadeY < 0)
-            _velocidadeY = -2f;
+        {
+            _velocidadeY = -2f; // Reseta gravidade no chão
+        }
 
-        // Unity 5: Input.GetButtonDown("Jump")
-        // Unity 6: Verificamos se a ação foi acionada neste quadro
         if (jumpAction.WasPressedThisFrame() && estaNoChao)
         {
             _velocidadeY = Mathf.Sqrt(alturaPulo * -2f * gravidade);
-            
             if (animacao != null) animacao.Play("JUMP");
-            
-            if (_audioSource != null && puloSound != null) 
-                _audioSource.PlayOneShot(puloSound, 0.7f);
+            if (_audioSource != null && puloSound != null) _audioSource.PlayOneShot(puloSound, 0.7f);
         }
 
         _velocidadeY += gravidade * Time.deltaTime;
+
+        // --- CORREÇÃO 1: Limite de Velocidade Terminal ---
+        // Impede que ele caia tão rápido que atravesse o chão (máximo -20 de velocidade)
+        if (_velocidadeY < -20f) _velocidadeY = -20f; 
 
         Vector3 movimentoFinal = direcaoMovimento * velocidade;
         movimentoFinal.y = _velocidadeY;
 
         _characterController.Move(movimentoFinal * Time.deltaTime);
+
+        // --- CORREÇÃO 2: Rede de Segurança (Respawn) ---
+        // Se ele cair muito abaixo do ImageTarget (por exemplo, y < -10), traga-o de volta
+        if (transform.localPosition.y < -10f)
+        {
+            // Desliga o controlador momentaneamente para teleportar
+            _characterController.enabled = false; 
+            transform.localPosition = new Vector3(0, 0.5f, 0); // Posição segura inicial
+            _velocidadeY = 0;
+            _characterController.enabled = true;
+        }
     }
 
     private void GerenciarAnimacoes()
