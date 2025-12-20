@@ -161,7 +161,7 @@ public class MovePersonagem : MonoBehaviour
      void carregaFase()
     {
         // Boas práticas modernas: Usar LoadScene em vez de Application.LoadLevel (que era do Unity 5)
-        SceneManager.LoadScene("cena");
+        SceneManager.LoadScene("cena - AR");
     }
 
     private void OnTriggerEnter(Collider other)
