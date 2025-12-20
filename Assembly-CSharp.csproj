@@ -51,18 +51,19 @@
     <Analyzer Include="D:\Unity\projects\Ayruma_AR\Library\PackageCache\com.unity.dt.app-ui@8ac7e730dd5d\Runtime\MVVM\SourceGenerators\netstandard2.0\MVVMSourceGenerators.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Cena com AR\movePersonagem.cs" />
     <Compile Include="Assets\Scripts\Quiz\moveOffset.cs" />
+    <Compile Include="Assets\Scripts\Cena com AR\gatilhoQuiz.cs" />
+    <Compile Include="Assets\Scripts\Cena com AR\interacaoToten.cs" />
+    <Compile Include="Assets\Scripts\Cena com AR\triviaManager.cs" />
     <Compile Include="Assets\Scripts\Quiz\comandosBasicos.cs" />
     <Compile Include="Assets\Scripts\Quiz\temaJogo.cs" />
-    <Compile Include="Assets\Scripts\Cena 1\gatilhoQuiz.cs" />
-    <Compile Include="Assets\Scripts\Cena 1\giraObjeto.cs" />
+    <Compile Include="Assets\Scripts\Cena com AR\movimentaCamera.cs" />
     <Compile Include="Assets\Scripts\Quiz\responder.cs" />
     <Compile Include="Assets\Scripts\Quiz\temaInfo.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Quiz\notaFinal.cs" />
-    <Compile Include="Assets\Scripts\Cena 1\movimentaCamera.cs" />
-    <Compile Include="Assets\Scripts\Cena 1\movePersonagem.cs" />
-    <Compile Include="Assets\Scripts\Cena 1\triviaManager.cs" />
+    <Compile Include="Assets\Scripts\Cena com AR\giraObjeto.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
