@@ -1840,13 +1840,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: felpudoarcardx
+  mTrackableName: ayrumatargetar2
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/FelpudoAdventure.xml
-  mAspectRatio: 1.5450346
+  mDataSetPath: Vuforia/ayruma.xml
+  mAspectRatio: 1.5
   mImageTargetType: 0
-  mWidth: 5
-  mHeight: 7.725173
+  mWidth: 5.6
+  mHeight: 8.4
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -1882,8 +1882,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1668706132}
   mHiddenRoot: {fileID: 0}
-  mTargetName: felpudoarcardx
-  mDatasetName: Vuforia/FelpudoAdventure.xml
+  mTargetName: ayrumatargetar2
+  mDatasetName: Vuforia/ayruma.xml
   mCastedBehaviour: {fileID: 1668706132}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -2516,7 +2516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3434055709998129328, guid: 0c5bf53c7603e45eda67897682acadf7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.96
+      value: -0.61
       objectReference: {fileID: 0}
     - target: {fileID: 3434055709998129328, guid: 0c5bf53c7603e45eda67897682acadf7, type: 3}
       propertyPath: m_LocalPosition.y
