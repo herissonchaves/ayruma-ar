@@ -41,13 +41,20 @@ public class notaFinal : MonoBehaviour
             estrela2.SetActive(true);
             estrela3.SetActive(true);
         }
-        else if(notaF>=7)
+        else if(notaF>=5)
         {
             estrela1.SetActive(true);
             estrela2.SetActive(true);
             estrela3.SetActive(false);
         }
-        else if(notaF>=4)
+
+        else if(notaF==0)
+        {
+            estrela1.SetActive(false);
+            estrela2.SetActive(false);
+            estrela3.SetActive(false);
+        }
+                else if(notaF<4)
         {
             estrela1.SetActive(true);
             estrela2.SetActive(false);

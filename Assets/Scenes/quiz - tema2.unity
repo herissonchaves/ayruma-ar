@@ -2043,23 +2043,80 @@ MonoBehaviour:
   respostaD: {fileID: 2029809395}
   infoRespostas: {fileID: 470447757}
   perguntas:
-  - "O personagem Sonic \xE9:"
+  - "Johannes Kepler revolucionou a astronomia ao demonstrar que as \xF3rbitas dos
+    planetas ao redor do Sol n\xE3o eram c\xEDrculos perfeitos, mas sim:"
+  - "De acordo com a Lei da Gravita\xE7\xE3o Universal de Isaac Newton, a for\xE7a
+    de atra\xE7\xE3o entre dois corpos \xE9:"
+  - "Qual \xE9 a causa f\xEDsica predominante das mar\xE9s na Terra, conforme demonstrado
+    por Newton em 1687?"
+  - "Historicamente, qual foi considerado o \"maior erro\" de Galileu Galilei em
+    sua teoria sobre as mar\xE9s?"
+  - "Segundo a 2\xAA Lei de Kepler (Lei das \xC1reas), um planeta se move com maior
+    velocidade quando:"
+  - "Muito antes dos cientistas europeus, qual povo ind\xEDgena brasileiro j\xE1
+    sabia que a Lua era a principal causa das mar\xE9s?"
+  - "As chamadas \"mar\xE9s de siz\xEDgia\" (\xE1guas-vivas), que possuem os maiores
+    desn\xEDveis, ocorrem quando:"
+  - "Por que a for\xE7a de mar\xE9 da Lua \xE9 cerca de 2,2 vezes maior que a do
+    Sol, mesmo o Sol tendo uma massa muito superior?"
+  - "A 3\xAA Lei de Kepler (Lei Harm\xF4nica) estabelece uma rela\xE7\xE3o matem\xE1tica
+    entre:"
   - O Primeiro console caseiro foi
   alternativasA:
-  - uma raposa
-  - O Tele Jogo
+  - "Quadrados conc\xEAntricos"
+  - "Proporcional \xE0 dist\xE2ncia entre eles"
+  - "O aquecimento das \xE1guas pelo Sol"
+  - Afirmar que a Terra era o centro do Universo
+  - "Est\xE1 no ponto mais distante do Sol (af\xE9lio)"
+  - "Tupinamb\xE1s"
+  - "A Terra, a Lua e o Sol est\xE3o alinhados (Lua Nova ou Cheia)"
+  - "Porque a Lua \xE9 mais quente que o Sol"
+  - A cor da estrela e sua temperatura
+  - Teoria da Relatividade Geral
   alternativasB:
-  - "um ouri\xE7o"
-  - O Atari
+  - Elipses com o Sol em um dos focos
+  - "Inversamente proporcional ao quadrado da dist\xE2ncia entre eles"
+  - "O campo magn\xE9tico terrestre"
+  - "Desconsiderar a influ\xEAncia da Lua no fluxo das \xE1guas"
+  - "Sua \xF3rbita cruza a de outro planeta"
+  - Incas
+  - "A Lua est\xE1 na fase Crescente ou Minguante"
+  - "Porque a Lua est\xE1 muito mais pr\xF3xima da Terra do que o Sol"
+  - "O tempo que um planeta leva para orbitar o Sol e sua dist\xE2ncia m\xE9dia dele"
+  - "Lei da In\xE9rcia"
   alternativasC:
-  - um porco espinho
-  - O Megavox Odyssey
+  - Espirais infinitas
+  - Independente da massa dos objetos
+  - "A atra\xE7\xE3o gravitacional da Lua e, em menor escala, do Sol"
+  - Acreditar que o Sol girava em torno da Terra
+  - "Est\xE1 no ponto mais pr\xF3ximo do Sol (peri\xE9lio)"
+  - Astecas
+  - "O Sol est\xE1 em oposi\xE7\xE3o exata a Marte"
+  - "Porque o Sol n\xE3o possui gravidade sobre os l\xEDquidos"
+  - "A massa do planeta e o n\xFAmero de luas"
+  - "Lei da Gravita\xE7\xE3o Universal"
   alternativasD:
-  - um marsupial
-  - O Pong
+  - Linhas retas oscilantes
+  - "Afetada apenas pelo movimento de rota\xE7\xE3o"
+  - "Apenas o movimento de rota\xE7\xE3o da Terra"
+  - "Dizer que as \xF3rbitas planet\xE1rias eram el\xEDpticas"
+  - Ocorre um eclipse solar total
+  - Maias
+  - "A Terra atinge o solst\xEDcio de inverno"
+  - "Porque a Lua gira mais r\xE1pido que a Terra"
+  - A velocidade da luz e a gravidade
+  - "Lei da Conserva\xE7\xE3o da Energia"
   respostasCorretas:
-  - "um ouri\xE7o"
-  - O Megavox Odyssey
+  - Elipses com o Sol em um dos focos
+  - "Inversamente proporcional ao quadrado da dist\xE2ncia entre eles"
+  - "A atra\xE7\xE3o gravitacional da Lua e, em menor escala, do Sol"
+  - "Desconsiderar a influ\xEAncia da Lua no fluxo das \xE1guas"
+  - "Est\xE1 no ponto mais pr\xF3ximo do Sol (peri\xE9lio)"
+  - "Tupinamb\xE1s"
+  - "A Terra, a Lua e o Sol est\xE3o alinhados (Lua Nova ou Cheia)"
+  - "Porque a Lua est\xE1 muito mais pr\xF3xima da Terra do que o Sol"
+  - "O tempo que um planeta leva para orbitar o Sol e sua dist\xE2ncia m\xE9dia dele"
+  - "Lei da Gravita\xE7\xE3o Universal"
 --- !u!82 &1721263814
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2067,7 +2124,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721263810}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}

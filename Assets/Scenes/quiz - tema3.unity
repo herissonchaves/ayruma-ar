@@ -2043,85 +2043,87 @@ MonoBehaviour:
   respostaD: {fileID: 2029809395}
   infoRespostas: {fileID: 470447757}
   perguntas:
-  - "Qual fil\xF3sofo grego estruturou o sistema geoc\xEAntrico, defendendo por cerca
-    de 1.500 anos que a Terra era o centro im\xF3vel do Universo? "
-  - "No sistema de Ptolomeu, qual recurso era utilizado para tentar explicar o complexo
-    movimento retr\xF3grado que os planetas descreviam no c\xE9u? "
-  - "Quem prop\xF4s, durante o Renascimento, a maior transforma\xE7\xE3o nas ideias
-    astron\xF4micas ao retirar a Terra do centro e sugerir que ela girava em torno
-    do Sol? "
-  - "Atrav\xE9s de suas observa\xE7\xF5es com o telesc\xF3pio (luneta), o que Galileu
-    Galilei descobriu que abalou a cren\xE7a na perfei\xE7\xE3o e imutabilidade dos
-    corpos celestes? "
-  - "Qual foi considerado o \"maior erro\" hist\xF3rico de Galileu Galilei em sua
-    teoria sobre o funcionamento do fluxo e refluxo do mar? "
-  - "Muito antes das explica\xE7\xF5es cient\xEDficas europeias, qual povo ind\xEDgena
-    que habitava o Brasil j\xE1 sabia que a Lua era a principal causa das mar\xE9s? "
-  - "Johannes Kepler, contempor\xE2neo de Galileu, revolucionou a astronomia ao descobrir
-    que as \xF3rbitas dos planetas ao redor do Sol tinham qual formato geom\xE9trico? "
-  - "Qual cientista consolidou o pensamento helioc\xEAntrico em 1687 atrav\xE9s da
-    Lei da Gravita\xE7\xE3o Universal, unificando as leis f\xEDsicas do c\xE9u e
-    da Terra? "
-  - "Os ind\xEDgenas brasileiros utilizavam um dos mais antigos instrumentos da astronomia
-    para determinar o meio-dia solar e as esta\xE7\xF5es do ano. Como ele \xE9 chamado? "
-  - "Qual \xE9 a teoria cosmol\xF3gica mais aceita atualmente para explicar a origem
-    do Universo a partir de uma \"Grande Expans\xE3o\" ocorrida h\xE1 cerca de 13,8
-    bilh\xF5es de anos? "
+  - "Qual \xE9 a teoria mais aceita atualmente para explicar a forma\xE7\xE3o do
+    Sistema Solar h\xE1 cerca de 4,6 bilh\xF5es de anos?"
+  - "Os planetas do Sistema Solar s\xE3o divididos em dois grupos principais. Quais
+    s\xE3o as caracter\xEDsticas fundamentais dos planetas rochosos (ou tel\xFAricos)?"
+  - "V\xEAnus \xE9 frequentemente chamado de \"planeta irm\xE3o\" da Terra, mas possui
+    uma diferen\xE7a extrema de temperatura. Por que ele \xE9 o planeta mais quente
+    do Sistema Solar?"
+  - "O planeta Marte \xE9 conhecido como o \"Planeta Vermelho\". Qual \xE9 a causa
+    cient\xEDfica para essa colora\xE7\xE3o caracter\xEDstica?"
+  - "Onde se localiza o Cintur\xE3o de Asteroides, regi\xE3o composta por milh\xF5es
+    de blocos rochosos que n\xE3o chegaram a formar um planeta?"
+  - "Saturno \xE9 famoso por seus an\xE9is, mas possui uma caracter\xEDstica f\xEDsica
+    \xFAnica em rela\xE7\xE3o \xE0 sua densidade. Qual \xE9 ela?"
+  - "O planeta Urano possui uma caracter\xEDstica de rota\xE7\xE3o que o distingue
+    de todos os outros planetas. Qual \xE9 essa particularidade?"
+  - "Os cometas s\xE3o pequenos corpos formados por gelo e poeira. O que acontece
+    com a cauda de um cometa quando ele se aproxima do Sol?"
+  - "Em 2006, a Uni\xE3o Astron\xF4mica Internacional criou a categoria de \"Planetas-An\xF5es\".
+    Quais astros pertencem a este grupo?"
+  - "O que define o Cintur\xE3o de Kuiper no Sistema Solar externo?"
   alternativasA:
-  - "Nicolau Cop\xE9rnico"
-  - "\xD3rbitas el\xEDpticas "
-  - "Cl\xE1udio Ptolomeu"
-  - "Que o Universo \xE9 eterno e est\xE1tico "
-  - 'Afirmar que a Terra era o centro do Universo '
-  - 'Incas '
-  - 'Circular perfeito '
-  - 'Isaac Newton '
-  - "Telesc\xF3pio refrator "
-  - "Teoria do Estado Estacion\xE1rio "
+  - Teoria do Big Bang
+  - "S\xE3o compostos predominantemente de gases como hidrog\xEAnio e h\xE9lio."
+  - "Por ser o planeta mais pr\xF3ximo do Sol"
+  - "A presen\xE7a de poeira vulc\xE2nica ativa em sua atmosfera."
+  - "Entre as \xF3rbitas de Merc\xFArio e V\xEAnus"
+  - "\xC9 o planeta mais denso de todo o Sistema Solar."
+  - "Ele n\xE3o realiza movimento de rota\xE7\xE3o, estando sempre com a mesma face
+    para o Sol."
+  - "A cauda sempre aponta na dire\xE7\xE3o exata do Sol."
+  - "Plut\xE3o, Ceres, Eris, Haumea e Makemake."
+  - "\xC9 uma camada de gases que envolve todo o Sol."
   alternativasB:
-  - "Arist\xF3teles "
-  - "Lei da Gravita\xE7\xE3o Universal"
-  - Tales de Mileto
-  - "Que a Lua possu\xEDa crateras e montanhas, e o Sol possu\xEDa manchas "
-  - "Desconsiderar a influ\xEAncia da Lua como raz\xE3o principal das mar\xE9s"
-  - 'Astecas '
-  - 'Quadrado '
-  - 'Edwin Hubble '
-  - "Gn\xF4mon (ou Kuaray Ra'anga) "
-  - 'Modelo Ptolomaico '
+  - "Teoria do Estado Estacion\xE1rio"
+  - "S\xE3o corpos s\xF3lidos, densos e com superf\xEDcies rochosas bem definidas"
+  - "Devido \xE0 presen\xE7a de oceanos de lava em toda a sua superf\xEDcie."
+  - "A abund\xE2ncia de \xF3xido de ferro (ferrugem) em sua camada superficial."
+  - "Al\xE9m da \xF3rbita de Netuno."
+  - "Sua densidade m\xE9dia \xE9 menor que a da \xE1gua l\xEDquida."
+  - "Seu eixo de rota\xE7\xE3o \xE9 inclinado em quase 90 graus, girando praticamente
+    \"deitado\"."
+  - A cauda desaparece devido ao derretimento total do gelo.
+  - "Lua, Ganimedes, Tit\xE3 e Europa."
+  - "\xC9 a regi\xE3o onde se localiza o planeta gigante J\xFApiter."
   alternativasC:
-  - 'Johannes Kepler '
-  - 'Epiciclos e deferentes '
-  - "Nicolau Cop\xE9rnico"
-  - 'Que as estrelas estavam presas a esferas de cristal '
-  - "Acreditar que as \xF3rbitas dos planetas eram el\xEDpticas"
-  - "Tupinamb\xE1s "
-  - "El\xEDptico "
-  - 'Albert Einstein '
-  - "Espectr\xF4metro"
-  - 'Teoria do Big Bang '
+  - "Hip\xF3tese da Nebulosa Solar Primitiva"
+  - "Est\xE3o localizados todos al\xE9m da \xF3rbita de Netuno."
+  - "Por causa de sua densa atmosfera de di\xF3xido de carbono, que gera um efeito
+    estufa intenso"
+  - "A alta temperatura de sua crosta devido \xE0 proximidade com o Sol."
+  - "Entre as \xF3rbitas de Marte e J\xFApiter."
+  - "Possui um n\xFAcleo s\xF3lido composto apenas de gelo."
+  - "Ele gira no sentido oposto ao de sua transla\xE7\xE3o ao redor do Sol."
+  - A cauda aponta sempre no sentido oposto ao Sol, soprada pelo vento solar.
+  - "Marte, Merc\xFArio e os sat\xE9lites de J\xFApiter."
+  - "\xC9 uma regi\xE3o vasta al\xE9m de Netuno composta por objetos transnetunianos
+    e compostos congelados."
   alternativasD:
-  - 'Isaac Newton '
-  - "Expans\xE3o do Universo "
-  - 'Giordano Bruno '
-  - Que a Terra era plana e flutuava no oceano
-  - "Negar a exist\xEAncia de sat\xE9lites em J\xFApiter "
-  - 'Maias '
-  - 'Espiral '
-  - 'Aristarco de Samos '
-  - "Radiotelesc\xF3pio"
-  - "Hip\xF3tese Nebular "
+  - Teoria da Relatividade Geral
+  - "Possuem sistemas complexos de an\xE9is e dezenas de luas."
+  - "Porque n\xE3o possui campo magn\xE9tico para repelir o calor solar."
+  - "A reflex\xE3o da luz solar em suas calotas polares de gelo seco."
+  - Entre a Terra e a Lua.
+  - "Sua gravidade \xE9 a mais forte entre todos os planetas gasosos."
+  - "Sua velocidade de rota\xE7\xE3o \xE9 a maior do Sistema Solar."
+  - "A cauda se enrola ao redor do n\xFAcleo do cometa devido \xE0 gravidade solar."
+  - "Apenas Plut\xE3o e os grandes asteroides do cintur\xE3o principal."
+  - "\xC9 o local onde as estrelas de outras gal\xE1xias colidem com o Sistema Solar."
   respostasCorretas:
-  - "Arist\xF3teles "
-  - 'Epiciclos e deferentes '
-  - "Nicolau Cop\xE9rnico"
-  - "Que a Lua possu\xEDa crateras e montanhas, e o Sol possu\xEDa manchas "
-  - "Desconsiderar a influ\xEAncia da Lua como raz\xE3o principal das mar\xE9s"
-  - "Tupinamb\xE1s "
-  - "El\xEDptico "
-  - 'Isaac Newton '
-  - "Gn\xF4mon (ou Kuaray Ra'anga) "
-  - 'Teoria do Big Bang '
+  - "Hip\xF3tese da Nebulosa Solar Primitiva"
+  - "S\xE3o corpos s\xF3lidos, densos e com superf\xEDcies rochosas bem definidas"
+  - Elipses com o Sol em um dos focos
+  - "A abund\xE2ncia de \xF3xido de ferro (ferrugem) em sua camada superficial."
+  - "Entre as \xF3rbitas de Marte e J\xFApiter."
+  - "Sua densidade m\xE9dia \xE9 menor que a da \xE1gua l\xEDquida."
+  - "Seu eixo de rota\xE7\xE3o \xE9 inclinado em quase 90 graus, girando praticamente
+    \"deitado\"."
+  - A cauda aponta sempre no sentido oposto ao Sol, soprada pelo vento solar.
+  - "Plut\xE3o, Ceres, Eris, Haumea e Makemake."
+  - "\xC9 uma regi\xE3o vasta al\xE9m de Netuno composta por objetos transnetunianos
+    e compostos congelados."
 --- !u!82 &1721263814
 AudioSource:
   m_ObjectHideFlags: 0

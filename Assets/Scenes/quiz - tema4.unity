@@ -2043,85 +2043,85 @@ MonoBehaviour:
   respostaD: {fileID: 2029809395}
   infoRespostas: {fileID: 470447757}
   perguntas:
-  - "Qual fil\xF3sofo grego estruturou o sistema geoc\xEAntrico, defendendo por cerca
-    de 1.500 anos que a Terra era o centro im\xF3vel do Universo? "
-  - "No sistema de Ptolomeu, qual recurso era utilizado para tentar explicar o complexo
-    movimento retr\xF3grado que os planetas descreviam no c\xE9u? "
-  - "Quem prop\xF4s, durante o Renascimento, a maior transforma\xE7\xE3o nas ideias
-    astron\xF4micas ao retirar a Terra do centro e sugerir que ela girava em torno
-    do Sol? "
-  - "Atrav\xE9s de suas observa\xE7\xF5es com o telesc\xF3pio (luneta), o que Galileu
-    Galilei descobriu que abalou a cren\xE7a na perfei\xE7\xE3o e imutabilidade dos
-    corpos celestes? "
-  - "Qual foi considerado o \"maior erro\" hist\xF3rico de Galileu Galilei em sua
-    teoria sobre o funcionamento do fluxo e refluxo do mar? "
-  - "Muito antes das explica\xE7\xF5es cient\xEDficas europeias, qual povo ind\xEDgena
-    que habitava o Brasil j\xE1 sabia que a Lua era a principal causa das mar\xE9s? "
-  - "Johannes Kepler, contempor\xE2neo de Galileu, revolucionou a astronomia ao descobrir
-    que as \xF3rbitas dos planetas ao redor do Sol tinham qual formato geom\xE9trico? "
-  - "Qual cientista consolidou o pensamento helioc\xEAntrico em 1687 atrav\xE9s da
-    Lei da Gravita\xE7\xE3o Universal, unificando as leis f\xEDsicas do c\xE9u e
-    da Terra? "
-  - "Os ind\xEDgenas brasileiros utilizavam um dos mais antigos instrumentos da astronomia
-    para determinar o meio-dia solar e as esta\xE7\xF5es do ano. Como ele \xE9 chamado? "
-  - "Qual \xE9 a teoria cosmol\xF3gica mais aceita atualmente para explicar a origem
-    do Universo a partir de uma \"Grande Expans\xE3o\" ocorrida h\xE1 cerca de 13,8
-    bilh\xF5es de anos? "
+  - "Qual povo ind\xEDgena brasileiro j\xE1 sabia que a Lua era a principal causa
+    das mar\xE9s muito antes das explica\xE7\xF5es cient\xEDficas de Galileu e Newton?"
+  - "O instrumento ind\xEDgena composto por uma haste cravada verticalmente no solo
+    para observar a sombra do Sol e determinar as esta\xE7\xF5es \xE9 o:"
+  - "Diferente da astronomia ocidental, as constela\xE7\xF5es ind\xEDgenas brasileiras
+    s\xE3o formadas n\xE3o apenas pela uni\xE3o de estrelas, mas tamb\xE9m por:"
+  - "O aglomerado estelar das Pl\xEAiades (chamado de Seichu ou Eixu) \xE9 fundamental
+    para muitas etnias ind\xEDgenas por ser usado como:"
+  - "A constela\xE7\xE3o da Ema (Guyra Nhandu) surge totalmente ao anoitecer em junho,
+    indicando o in\xEDcio de qual esta\xE7\xE3o no sul do Brasil?"
+  - "Qual destas constela\xE7\xF5es surge em dezembro e sinaliza o in\xEDcio do ver\xE3o
+    no sul e da esta\xE7\xE3o chuvosa no norte do Brasil?"
+  - "Como a Via L\xE1ctea \xE9 popularmente conhecida por diversas etnias ind\xEDgenas
+    brasileiras devido \xE0 presen\xE7a de constela\xE7\xF5es de grandes mam\xEDferos
+    nessa regi\xE3o?"
+  - "Qual constela\xE7\xE3o \xE9 a principal refer\xEAncia noturna para os ind\xEDgenas
+    do Hemisf\xE9rio Sul determinarem os pontos cardeais e a dura\xE7\xE3o do tempo
+    \xE0 noite?"
+  - "Por que os ind\xEDgenas evitam tradicionalmente a ca\xE7a durante a fase da
+    Lua Cheia?"
+  - "A constela\xE7\xE3o do Veado (Guaxu) surge em mar\xE7o, marcando a transi\xE7\xE3o
+    para qual esta\xE7\xE3o no sul do Brasil?"
   alternativasA:
-  - "Nicolau Cop\xE9rnico"
-  - "\xD3rbitas el\xEDpticas "
-  - "Cl\xE1udio Ptolomeu"
-  - "Que o Universo \xE9 eterno e est\xE1tico "
-  - 'Afirmar que a Terra era o centro do Universo '
-  - 'Incas '
-  - 'Circular perfeito '
-  - 'Isaac Newton '
-  - "Telesc\xF3pio refrator "
-  - "Teoria do Estado Estacion\xE1rio "
+  - Incas
+  - "Astrol\xE1bio"
+  - "Planetas vis\xEDveis a olho nu"
+  - "Guia exclusivo para navega\xE7\xE3o mar\xEDtima"
+  - Inverno
+  - Anta do Norte
+  - Rio de Prata
+  - "\xD3rion"
+  - Devido ao frio extremo que a Lua emite
+  - Primavera
   alternativasB:
-  - "Arist\xF3teles "
-  - "Lei da Gravita\xE7\xE3o Universal"
-  - Tales de Mileto
-  - "Que a Lua possu\xEDa crateras e montanhas, e o Sol possu\xEDa manchas "
-  - "Desconsiderar a influ\xEAncia da Lua como raz\xE3o principal das mar\xE9s"
-  - 'Astecas '
-  - 'Quadrado '
-  - 'Edwin Hubble '
-  - "Gn\xF4mon (ou Kuaray Ra'anga) "
-  - 'Modelo Ptolomaico '
+  - Maias
+  - "Gn\xF4mon (ou Kuaray Ra'anga"
+  - "Manchas claras e escuras da Via L\xE1ctea"
+  - "Calend\xE1rio agr\xEDcola e marca\xE7\xE3o do in\xEDcio do ano"
+  - "Ver\xE3o"
+  - Veado
+  - Caminho da Ema
+  - "Cruzeiro do Sul (Kurus\xE1 ou Kuruxu)"
+  - "Porque os animais ficam mais agitados e a alta luminosidade facilita a vis\xE3o
+    das presas contra o ca\xE7ador"
+  - "Ver\xE3o"
   alternativasC:
-  - 'Johannes Kepler '
-  - 'Epiciclos e deferentes '
-  - "Nicolau Cop\xE9rnico"
-  - 'Que as estrelas estavam presas a esferas de cristal '
-  - "Acreditar que as \xF3rbitas dos planetas eram el\xEDpticas"
-  - "Tupinamb\xE1s "
-  - "El\xEDptico "
-  - 'Albert Einstein '
-  - "Espectr\xF4metro"
-  - 'Teoria do Big Bang '
+  - "Tupinamb\xE1s"
+  - "Telesc\xF3pio refrator"
+  - "Sat\xE9lites artificiais em \xF3rbita"
+  - Mapa para encontrar minas de ouro
+  - Primavera
+  - "Homem Velho (Tuiva\xE9)"
+  - "Caminho da Anta (Tapi\u2019irap\xE9)"
+  - Ursa Maior
+  - "Porque \xE9 o per\xEDodo em que as estrelas \"desaparecem\""
+  - Outono
   alternativasD:
-  - 'Isaac Newton '
-  - "Expans\xE3o do Universo "
-  - 'Giordano Bruno '
-  - Que a Terra era plana e flutuava no oceano
-  - "Negar a exist\xEAncia de sat\xE9lites em J\xFApiter "
-  - 'Maias '
-  - 'Espiral '
-  - 'Aristarco de Samos '
-  - "Radiotelesc\xF3pio"
-  - "Hip\xF3tese Nebular "
+  - Astecas
+  - Sextante
+  - "Fen\xF4menos meteorol\xF3gicos como raios"
+  - "Refer\xEAncia para prever eclipses solares"
+  - Outono
+  - Colibri
+  - Estrada das Estrelas
+  - Cassiopeia
+  - "Por ser a fase em que a mar\xE9 est\xE1 sempre baixa"
+  - Inverno
   respostasCorretas:
-  - "Arist\xF3teles "
-  - 'Epiciclos e deferentes '
-  - "Nicolau Cop\xE9rnico"
-  - "Que a Lua possu\xEDa crateras e montanhas, e o Sol possu\xEDa manchas "
-  - "Desconsiderar a influ\xEAncia da Lua como raz\xE3o principal das mar\xE9s"
-  - "Tupinamb\xE1s "
-  - "El\xEDptico "
-  - 'Isaac Newton '
-  - "Gn\xF4mon (ou Kuaray Ra'anga) "
-  - 'Teoria do Big Bang '
+  - "Tupinamb\xE1s"
+  - "Gn\xF4mon (ou Kuaray Ra'anga"
+  - "Manchas claras e escuras da Via L\xE1ctea"
+  - "Calend\xE1rio agr\xEDcola e marca\xE7\xE3o do in\xEDcio do ano"
+  - Inverno
+  - "Homem Velho (Tuiva\xE9)"
+  - "Caminho da Anta (Tapi\u2019irap\xE9)"
+  - Cassiopeia
+  - "Porque os animais ficam mais agitados e a alta luminosidade facilita a vis\xE3o
+    das presas contra o ca\xE7ador"
+  - Outono
 --- !u!82 &1721263814
 AudioSource:
   m_ObjectHideFlags: 0
